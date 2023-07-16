@@ -12,8 +12,8 @@
     --ff-body: var(--ff-primary);
   --ff-heading: var(--ff-primary);
 
-  --fw-regular: 400;
-  --fw-bold: 400;
+  --fw-regular: 300;
+  --fw-bold: 700;
 
   --fs-600: 1rem;
   --fs-700: 2rem;
@@ -37,7 +37,11 @@
 
 
 }
+*{
 
+  font-family: var(--ff-primary);
+  color: var(--clr-primary);
+}
 /* Box sizing rules */
 *,
 *::before,
@@ -114,20 +118,14 @@ select {
 }
 .primary-header {
     background-image: url("../Assignment2/IMAGES/hero.jpg");
-height: 932px;
-Width: 98%;
-background-size: cover;
-margin: 10px;
-Top:24px;
-Left: 24px;
-  }
-  .letter1 {
-    color: var(--clr-primary);
-  }
-  
-  .letter2 {
-    color: ;
-  }
+    height: 932px;
+    Width: 98%;
+    background-size: cover;
+    margin: 10px;
+    Top:24px;
+    Left: 24px;
+
+}
   .center-drone{
 
 justify-content: center;
@@ -138,47 +136,73 @@ margin-right: 40px;
 position: relative;
   }
  
-.container {
+  .container {
     --max-width: 1110px;
     --padding: 1rem;
-  
-    width: min(var(--max-width), 100% - (var(--padding) * 2));
+    width: min(var(--max-width), calc(100% - (var(--padding) * 2)));
     margin-inline: auto;
   }
-  .primary-navigation{
   
-  padding: 10px;
-  display: flex;
-  justify-content: center;
+  .primary-navigation {
+    padding: 10px;
+    display: flex;
+    align-items: center;
   }
-.nav-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-list li {
-  display: inline;
-  margin-right: 80px;
-  Width: 204px;
-  Height:19px;
-}
-
-.nav-list li a {
-  color: var(--clr-primary);
-  text-decoration: none;
-}
-.button {
-  float: right;
-  margin-top: -36px;
-  background-color: transparent;
-  padding: 3px 20px; 
-  margin-right: -2%;
-}
-
-.nav-list li a:hover {
-  text-decoration: underline;
-}
+  
+  .logo-li {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .logo {
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    
+  }
+  
+  .button {
+    float: right;
+    background-color: transparent;
+    padding: 3px 20px;
+    margin-top: -2.5%;
+  }
+  .button:hover{
+    background-color: var(--clr-primary);
+    color:#FFFFFF;
+  }
+  .nav-item {
+    margin-left: 20px; /* Adjust the margin as needed */
+    text-align: center; /* Add this line to center the text */
+  }
+  .nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-list li {
+    margin-right: 80px;
+    width: 204px;
+    height: 19px;
+    text-align: center;
+  }
+  
+  .nav-list li a {
+    color: var(--clr-primary);
+    text-decoration: none;
+  }
+  
+  .nav-list li:not(.logo-li) a:hover {
+    background-color: var(--clr-primary);
+    color:#FFFFFF;
+  }
+  
+  
 .center-drone .fs-700{
 
   margin-top: 50px;
@@ -194,9 +218,9 @@ position: relative;
   align-items: center;
   justify-content: center;
   margin: 0;
-background-color: var(--clr-backdrop);
-height: 932px;
-Width: 100%;
+  background-color: var(--clr-backdrop);
+  height: 932px;
+  Width: 100%;
 }
 .heading{
 text-align: center;
@@ -222,6 +246,7 @@ div.gallery {
   color: var(--clr-primary);
   background-color: var(--clr-article);
   margin-top: 150px;
+  font-weight: var(--fw-bold);
 
 
 }
@@ -288,6 +313,10 @@ text-align: center;
   background-color: transparent;
   padding: 10px 40px;
 }
+.submit-button:hover{
+  background-color: var(--clr-primary);
+  color:#FFFFFF; 
+}
 footer {
   height: 150px;
   width: 100%;
@@ -307,10 +336,14 @@ footer {
   padding: 0;
 }
 
+
 .footer-list li {
   margin-left: 90px;
 }
-
+.footer-list li a:hover{
+  background-color: var(--clr-primary);
+    color:#FFFFFF;
+}
 .btn-footer {
   background-color: transparent;
   color: var(--clr-primary);
@@ -318,6 +351,10 @@ footer {
   border: 1px solid var(--clr-primary);
  
   cursor: pointer;
+}
+.btn-footer:hover{
+  background-color: var(--clr-primary);
+    color:#FFFFFF;
 }
 .footer-list li a{
   display: inline;
@@ -327,6 +364,7 @@ footer {
   color: var(--clr-primary);
   text-decoration: none;
 }
+
 .social-icons {
   
   margin-right: 10px;
@@ -334,6 +372,7 @@ footer {
  margin-top: -80px;
 margin-left: 40px;
 }
+
 .social-icons a {
   display: flex;
 height: 60px;
@@ -349,12 +388,17 @@ width: 60px;
   align-items: center;
   justify-content: center;
 }
+
 /* Utility classes */
 .text-primary {
     color: var(--clr-primary);
   }
 .text-secondary{
   color: var(--clr-secondary);
+}
+.text-article{
+
+  color: var(--clr-article);
 }
   .bg-backdrop {
     background-color: var(--clr-backdrop);
