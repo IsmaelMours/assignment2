@@ -117,7 +117,7 @@ select {
   }
 }
 .primary-header {
-    background-image: url("../Assignment2/IMAGES/hero.jpg");
+    background-image: url("IMAGES/hero.jpg");
     height: 932px;
     Width: 98%;
     background-size: cover;
